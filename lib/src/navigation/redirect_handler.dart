@@ -10,8 +10,5 @@ abstract class RedirectHandler {
     if (currentUser == null && currentRoute != Routes.logIn) {
       return Routes.logIn;
     }
-    if (currentUser != null && currentRoute != Routes.confirmAccount) {
-      return Routes.confirmAccount;
-    }
   }
 }
