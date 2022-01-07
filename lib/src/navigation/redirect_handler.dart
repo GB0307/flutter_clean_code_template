@@ -4,7 +4,14 @@ import 'package:go_router/go_router.dart';
 
 abstract class RedirectHandler {
   static String? redirect(GoRouterState state) {
-    var isLoggedIn = LoginModule.instance.isLoggedIn().data == true;
-    if (!isLoggedIn && state.subloc != Routes.logIn) return "/login";
+    var currentRoute = state.subloc;
+    var currentUser = LoginModule.instance.getCurrentUser().data;
+
+    if (currentUser == null && currentRoute != Routes.logIn) {
+      return Routes.logIn;
+    }
+    if (currentUser != null && currentRoute != Routes.confirmAccount) {
+      return Routes.confirmAccount;
+    }
   }
 }

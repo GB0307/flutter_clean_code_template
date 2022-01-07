@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+import '../../LoginModule.dart';
 
-  final List<ProviderConfiguration> providers = const [
-    EmailProviderConfiguration(),
-    GoogleProviderConfiguration(
-      clientId: '...',
-    ),
-  ];
+class LoginPage extends StatelessWidget {
+  LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SignInScreen(providerConfigs: providers);
+    return SignInScreen(
+      providerConfigs: LoginModule.instance.loginProviders,
+    );
   }
 }
