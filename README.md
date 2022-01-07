@@ -4,7 +4,7 @@ A Template to start coding Clean Code Flutter projects.
 
 ## Getting Started
 
-Clone the project and start coding!
+Clone the project and setup firebase with the flutterfire-cli!
 
 ## Packages
 

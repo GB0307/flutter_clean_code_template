@@ -1,4 +1,4 @@
-package com.example.cpea
+package com.gbdev.cpea
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,10 +1,20 @@
 import 'package:cpea/src/core/interfaces/response.dart';
 import 'package:equatable/equatable.dart';
 
-abstract class IUseCase<Type, Params> {
-  const IUseCase();
+abstract class IBaseUseCase<Type, Params> {
+  const IBaseUseCase();
 
-  Future<Response<Type>> call(Params params);
+  Type call(Params params);
+}
+
+abstract class IUseCase<Type, Params>
+    extends IBaseUseCase<Response<Type>, Params> {
+  const IUseCase();
+}
+
+abstract class IAsyncUseCase<Type, Params>
+    extends IBaseUseCase<Future<Response<Type>>, Params> {
+  const IAsyncUseCase();
 }
 
 class NoParams extends Equatable {
