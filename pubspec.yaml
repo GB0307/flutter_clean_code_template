@@ -1,4 +1,4 @@
-name: cpea
+name: flutter_template
 description: A new Flutter project.
 
 # Prevent accidental publishing to pub.dev.
@@ -7,38 +7,66 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.15.1 <3.0.0"
+  sdk: ">=2.17.6 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  auto_route: 4.2.1
   flutter_localizations:
     sdk: flutter
-  intl: ^0.17.0
+  equatable: ^2.0.5
+  freezed_annotation: ^2.1.0
+  bloc: ^8.1.0
+  flutter_bloc: ^8.1.1
+  json_annotation: ^4.6.0
+  flutter_native_splash: ^2.2.11
+  google_fonts: ^3.0.1
 
-  freezed_annotation:
-  equatable: ^2.0.3
-  flutter_bloc: ^8.0.1
-  get: ^4.6.1
-  go_router: ^3.0.0
-  cloud_firestore: ^3.1.5
-  firebase_auth: ^3.3.4
-  flutterfire_ui: ^0.3.0
-  dartz: ^0.10.1
-  firebase_core: ^1.10.6
-  flutter_dotenv: ^5.0.2
-
+  gbx_di:
+    git:
+      url: https://github.com/GB0307/flutter_gbx
+      path: gbx_di/
+  gbx_core:
+    git:
+      url: https://github.com/GB0307/flutter_gbx
+      path: gbx_core/
+  gbx_bloc:
+    git:
+      url: https://github.com/GB0307/flutter_gbx
+      path: gbx_bloc/
+    
 dev_dependencies:
+  auto_route_generator: ^4.2.1          
+  build_runner:  
   flutter_test:
     sdk: flutter
-  flutter_lints: ^1.0.0
+  flutter_launcher_icons: "^0.10.0"
 
-  build_runner:
-  freezed:
+  flutter_lints: ^2.0.0
+  freezed: ^2.1.0+1
+  json_serializable:
 
 flutter:
   generate: true
   uses-material-design: true
   assets:
     - assets/images/
-    - .env
+
+flutter_native_splash:  
+  color: "#f7f7f7"
+  image: "assets/images/splash_logo.png"
+  android_12:
+    color: "#f7f7f7"
+    image: "assets/images/splash_logo.png"
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: #f7f7f7
+  min_sdk_android: 21
+  web:
+    generate: false
+  windows:
+    generate: false
