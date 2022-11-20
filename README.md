@@ -3,6 +3,7 @@
 A Template to start coding Clean Code Flutter projects.
 
 ## Folder structure:
+```bash
 ├── core   
 │   ├── navigation  
 │   └── resources  
@@ -26,6 +27,7 @@ A Template to start coding Clean Code Flutter projects.
 ├── di.dart  
 ├── app.dart  
 └── main.dart  
+```
 
 ## Feature structure:
 ### "domain":
